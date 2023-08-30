@@ -14,3 +14,10 @@ after_success:
   - docker build -t diadem27/multi-nginx ./nginx
   - docker build -t diadem27/multi-server ./server
   - docker build -t diadem27/multi-worker ./worker
+
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+  - docker push diadem27/multi-client
+  - docker push diadem27/multi-nginx
+  - docker push diadem27/multi-server
+  - docker push diadem27/multi-worker

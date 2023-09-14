@@ -8,6 +8,6 @@ docker push diadem27/multi-client:$SHA
 docker push diadem27/multi-server:$SHA
 docker push diadem27/multi-worker:$SHA
 kubectl apply -f k8s
-kubectl set image deployments/server-deployment server=diadem27/multi-server:$SHA
-kubectl set image deployments/client-deployment client=diadem27/multi-client:$SHA
-kubectl set image deployments/worker-deployment worker=diadem27/multi-worker:$SHA
+kubectl set image deployments/server-deployment server=diadem27/multi-server:latest
+kubectl set image deployments/client-deployment client=diadem27/multi-client:latest
+kubectl set image deployments/worker-deployment worker=diadem27/multi-worker:latest

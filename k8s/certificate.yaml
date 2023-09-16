@@ -2,13 +2,13 @@ apiVersion: cert-manager.io/v1
 
 kind: Certificate
 metadata:
-  name: ifedaniel-com-tls
+  name: ifedan-com-tls
 spec:
-  secretName: ifedaniel-com
+  secretName: ifedan-com
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: ifedaniel.com
+  commonName: ifedan.com
   dnsNames:
-    - ifedaniel.com
-    - www.ifedaniel.com
+    - ifedan.com
+    - www.ifedan.com

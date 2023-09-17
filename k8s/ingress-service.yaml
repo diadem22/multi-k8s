@@ -11,9 +11,9 @@ metadata:
 spec:
   tls:
     - hosts:
-        - ifedaniel.com
-        - www.ifedaniel.com
-      secretName: ifedaniel-com
+        - ifedan.com
+        - www.ifedan.com
+      secretName: ifedan-com
   rules:
     - host: ifedaniel.com
       http:
@@ -26,7 +26,7 @@ spec:
             backend:
               serviceName: server-cluster-ip-service
               servicePort: 5000
-    - host: www.ifedaniel.com
+    - host: www.ifedan.com
       http:
         paths:
           - path: /
